@@ -1,0 +1,257 @@
+/* ---------------- Page & Card Wrapper ---------------- */
+.users-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.users-card {
+  background-color: var(--bg2);
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  max-width: 1500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.users-card h2 {
+  text-align: center;
+  color: var(--text);
+}
+
+/* ---------------- Table ---------------- */
+.users-table {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.users-title {
+  background: #fafafa;
+  font-weight: 600;
+  padding: 14px 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.users-table-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+  padding: 12px 20px;
+  align-items: center;
+  background-color: var(--bg1);
+  border-bottom: 1px solid #f1f1f1;
+  transition: 0.25s;
+}
+
+.users-table-row:hover {
+  background: var(--hover);
+  transform: scale(1.01);
+}
+
+/* ---------------- Role Badge ---------------- */
+.role-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  display: inline-block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+/* Hover - identical to your category badge */
+.role-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Admin -> Red */
+.role-badge.admin {
+  background: rgb(3, 172, 3);
+}
+
+/* User -> Blue */
+.role-badge.user {
+  background: #2c5fed;
+}
+
+
+/* Name Badge - Gray */
+.name-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;                   /* White text */
+  background: tomato;         
+  display: inline-block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.name-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* ---------------- Empty State ---------------- */
+.users-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 40px 0;
+  color: var(--text);
+  text-align: center;
+}
+
+.users-empty p {
+  font-size: 18px;
+}
+
+.users-empty small {
+  font-size: 14px;
+  color: #999;
+}
+
+/* ---------------- Action Icons ---------------- */
+.users-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.users-btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.2s ease;
+}
+
+.users-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Colors */
+.users-delete { background: #e63946; }
+
+
+/* ===================== Modern Confirmation Modal ===================== */
+.users-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.25s ease;
+  z-index: 9999;
+}
+
+.users-modal {
+  background: var(--bg2);
+  width: 380px;
+  padding: 28px 32px;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  text-align: center;
+  transform: scale(0.9);
+  animation: popIn 0.25s ease forwards;
+}
+
+.users-modal h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.users-modal p {
+  font-size: 15px;
+  color: var(--text-secondary, #777);
+  margin-bottom: 22px;
+}
+
+.users-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.users-confirm,
+.users-cancel {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+/* YES button */
+.users-confirm {
+  background: #e63946;
+  color: #fff;
+}
+
+.users-confirm:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(230,57,70,0.4);
+}
+
+/* Cancel button */
+.users-cancel {
+  background: #555;
+  color: #fff;
+}
+
+.users-cancel:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* -------- Animations -------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.85); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+
+/* ---------------- Dark Mode ---------------- */
+body.dark-mode .users-card { background-color: #222; }
+body.dark-mode .users-title { background-color: #333; }
+body.dark-mode .users-table-row { background-color: #2a2a2a; color: #fff; }
+body.dark-mode .users-empty small { color: #bbb; }
+body.dark-mode .users-modal { background: #222; }
+body.dark-mode .users-modal p { color: #aaa; }
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 700px) {
+  .users-table-row,
+  .users-title {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

@@ -1,0 +1,125 @@
+.notfound-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #efefef;
+  font-family: 'Inter', sans-serif;
+  padding-bottom: 150px;
+}
+
+.notfound-card {
+  background-color: var(--bg2);  /* match list-card background */
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);  /* match list-card shadow */
+  text-align: center;
+  max-width: 500px;
+  animation: popIn 0.5s ease;
+  color: var(--text);  /* match text color of your theme */
+}
+
+
+.notfound-icon {
+  font-size: 60px;
+  color: tomato;
+  margin-bottom: 20px;
+  animation: bounce 1.5s infinite;
+}
+
+.notfound-card h1 {
+  font-size: 80px;
+  color: tomato;
+  margin-bottom: 10px;
+}
+
+.notfound-card h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.notfound-card p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.notfound-btn {
+  padding: 12px 25px;
+  background: tomato; /* keep your accent red */
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.notfound-btn:hover {
+  background: rgb(255, 71, 39);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Animations */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .notfound-card {
+    padding: 40px 20px;
+  }
+
+  .notfound-card h1 {
+    font-size: 60px;
+  }
+
+  .notfound-card h2 {
+    font-size: 22px;
+  }
+}
+
+
+/* ================== Night Mode ================== */
+body.dark-mode .notfound-container {
+  background: #121212; /* dark background */
+}
+
+body.dark-mode .notfound-card {
+  background-color: #1e1e1e;
+  color: #eee;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.7);
+}
+
+body.dark-mode .notfound-card h2 {
+  color: #ddd;
+}
+
+body.dark-mode .notfound-card p {
+  color: #bbb;
+}
+
+body.dark-mode .notfound-btn {
+  background: tomato;
+}
+
+body.dark-mode .notfound-btn:hover {
+  background: rgb(255, 71, 39);
+}

@@ -1,0 +1,178 @@
+/* ======================== Background Full Screen ======================== */
+.admin-login-wrapper {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, rgb(255, 122, 99) 0%, rgb(255, 38, 0) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ======================== Card ======================== */
+.admin-login-card {
+  width: 420px;
+  background: #fff;
+  padding: 45px 35px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.5s ease-in-out;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-login-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+}
+
+/* ======================== Logo & Header ======================== */
+.admin-login-header {
+  margin-bottom: 30px;
+}
+
+.admin-login-logo {
+  width: 150px;
+  margin-bottom: 20px;
+  transition: transform 0.5s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.admin-login-logo:hover {
+  transform: scale(1.05);        /* slight zoom */
+  filter: brightness(1.1);       /* subtle brightening */
+}
+
+.admin-login-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: tomato;
+}
+
+.admin-login-header p {
+  color: #555;
+  margin-top: 6px;
+  font-size: 15px;
+}
+
+/* ======================== Error Message ======================== */
+.admin-login-error {
+  background: #ffe6e6;
+  border-left: 4px solid #d10000;
+  padding: 12px;
+  border-radius: 8px;
+  color: #d10000;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ======================== Form & Inputs ======================== */
+.admin-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Input group with icon wrapper */
+.admin-input-group {
+  text-align: left;
+  position: relative;
+}
+
+.admin-input-group label {
+  font-weight: 600;
+  font-size: 14px;
+  color: tomato;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 13px 14px 13px 42px; /* extra left padding for icon */
+  border: 1px solid #d1d9e6;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.input-wrapper input:focus {
+  border-color: tomato;
+  box-shadow: 0 0 0 3px rgba(253, 74, 42, 0.2);
+}
+
+.input-wrapper .input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: tomato;
+  pointer-events: none;
+}
+
+/* ======================== Login Button ======================== */
+.admin-login-btn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  background: tomato;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.admin-login-btn:hover {
+  background: rgb(253, 74, 42);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+}
+
+/* ======================== Footer ======================== */
+.admin-login-footer {
+  margin-top: 25px;
+  color: #888;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ======================== Fade-in Animation ======================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======================== Responsive ======================== */
+@media (max-width: 480px) {
+  .admin-login-card {
+    width: 90%;
+    padding: 35px 25px;
+  }
+
+  .admin-login-header h2 {
+    font-size: 24px;
+  }
+
+  .admin-login-btn {
+    font-size: 16px;
+  }
+}

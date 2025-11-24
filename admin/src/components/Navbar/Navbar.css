@@ -1,0 +1,180 @@
+/* Global Light Theme */
+:root {
+  --bg: #ffffff;
+  --bg2: #f7f7f7;
+  --text: #222;
+  --text-light: #555;
+  --primary: #ff5722;
+  --border: #e6e6e6;
+  --card-bg: #ffffff;
+  --card-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  --hover: #f2f2f2;
+}
+
+/* Global Dark Theme */
+body.dark-mode {
+  --bg: #121212;
+  --bg2: #1b1b1b;
+  --text: #eaeaea;
+  --text-light: #aaaaaa;
+  --primary: #ff784e;
+  --border: #333;
+  --card-bg: #1b1b1b;
+  --card-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  --hover: #242424;
+}
+
+/* Apply background & text globally */
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s ease;
+}
+
+/* ========== Base Navbar ========== */
+.navbar {
+  height: 100px;
+  padding: 0 50px;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: 0.3s ease;
+}
+
+/* Logo */
+.navbar-logo {
+  height: 90px;
+  transition: 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05) rotate(-2deg); /* Slight scale + rotation for interaction */
+}
+
+/* Right section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Icons */
+.nav-icon {
+  font-size: 1.3rem;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s;
+}
+
+.nav-icon:hover {
+  transform: scale(1.15);
+}
+
+/* Notification dot */
+.notif-dot {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  background: #ff3b3b;
+  border-radius: 50%;
+}
+
+/* Notification popup */
+.notif-popup {
+  position: absolute;
+  top: 70px;
+  right: 80px;
+  background: var(--bg2);
+  padding: 15px 20px;
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  animation: fadeIn 0.2s ease;
+}
+
+/* Profile dropdown */
+.profile-container {
+  position: relative;
+}
+
+.profile-icon {
+  font-size: 1.9rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.profile-icon:hover {
+  transform: scale(1.15);
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 160px;
+  background: var(--bg2);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 10px 0;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+.profile-dropdown.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.profile-dropdown p {
+  padding: 10px 15px;
+  margin: 0;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.profile-dropdown p:hover {
+  background: var(--hover);
+}
+
+.logout {
+  color: #ff3b3b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============= Light Mode Variables ============= */
+:root {
+  --bg: #ffffff;
+  --bg2: #f7f7f7;
+  --text: #222;
+  --border: #e6e6e6;
+  --hover: #ececec;
+  --shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ============= Dark Mode Variables ============= */
+body.dark-mode {
+  --bg: #1a1a1a;
+  --bg2: #262626;
+  --text: #eaeaea;
+  --border: #333;
+  --hover: #333333;
+  --shadow: 0 2px 8px rgba(0,0,0,0.5);
+}

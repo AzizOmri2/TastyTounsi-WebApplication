@@ -1,0 +1,195 @@
+/* ---------------- Sidebar Base ---------------- */
+.sidebar {
+  width: 220px;
+  min-height: 100vh;
+  background: var(--bg2);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  transition: width 0.4s ease, background 0.3s ease;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Collapsed sidebar */
+.sidebar.collapsed {
+  width: 70px;
+}
+
+/* Header: Collapse Button */
+.sidebar-header {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Collapse button default (light mode) */
+.collapse-btn {
+  position: absolute;
+  top: 20px;
+  right: -20px;
+  background-color: var(--bg2); /* background of button */
+  border: 1px solid var(--border);
+  color: var(--text); /* icon color */
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
+  z-index: 15;
+}
+
+/* Hover effect */
+.collapse-btn:hover {
+  background-color: var(--hover);
+  transform: scale(1.1);
+}
+
+/* Sidebar options */
+.sidebar-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 0 10px;
+  transition: padding 0.4s ease;
+}
+
+/* Each option */
+.sidebar-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+/* React Icon styling */
+.sidebar-icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: var(--text);
+}
+
+/* Hover effect on icons */
+.sidebar-option:hover .sidebar-icon {
+  transform: scale(1.1);
+}
+
+/* Badges */
+.badge {
+  background-color: tomato;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: auto;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Active state */
+.sidebar-option.active {
+  background-color: var(--primary);
+  color: #fff;
+  border-left-color: #ff704e;
+  box-shadow: 0 0 12px rgba(255, 112, 78, 0.5);
+}
+
+.sidebar-option.active .sidebar-icon {
+  color: #fff;
+}
+
+/* Hover effect for inactive links */
+.sidebar-option:not(.active):hover {
+  background-color: var(--hover);
+  transform: translateX(3px);
+}
+
+/* Tooltip for collapsed sidebar */
+.sidebar.collapsed .sidebar-option p {
+  display: none; /* hide text */
+}
+
+.sidebar.collapsed .sidebar-option .sidebar-icon {
+  margin: 0 auto; /* center icon */
+}
+
+.sidebar.collapsed .sidebar-option .badge {
+  display: none; /* hide badge */
+}
+
+.sidebar.collapsed .sidebar-option:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--bg2);
+  color: var(--text);
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  box-shadow: var(--card-shadow);
+  z-index: 20;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 900px) {
+  .sidebar {
+    width: 70px;
+  }
+
+  .sidebar-options {
+    margin-top: 30px;
+  }
+}
+
+/* ---------------- Dark Mode ---------------- */
+body.dark-mode .sidebar {
+  background: var(--bg2);
+  border-right: 1px solid var(--border);
+}
+
+body.dark-mode .sidebar-option {
+  color: #fff;
+}
+
+body.dark-mode .sidebar-option .sidebar-icon {
+  color: #fff;
+}
+
+body.dark-mode .sidebar-option.active {
+  background-color: var(--primary);
+  color: #fff;
+  border-left-color: #ff704e;
+  box-shadow: 0 0 12px rgba(255, 112, 78, 0.5);
+}
+
+body.dark-mode .sidebar-option:not(.active):hover {
+  background-color: var(--hover);
+}
+
+body.dark-mode .badge {
+  background-color: #ff704e;
+  color: #fff;
+}
+
+/* Dark mode collapse button */
+body.dark-mode .collapse-btn {
+  background-color: #333; /* or var(--bg2-dark) if you have a variable */
+  border: 1px solid #555; /* darker border */
+  color: #fff; /* white icon */
+}

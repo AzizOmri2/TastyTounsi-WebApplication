@@ -1,0 +1,61 @@
+/* ===== Admin Footer ===== */
+.admin-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: var(--card-bg, #fff);
+  border-top: 1px solid var(--border, #e0e0e0);
+  color: var(--text-light, #555);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.admin-footer a {
+  text-decoration: none;
+  color: var(--text-light, #555);
+  transition: color 0.3s;
+}
+
+.admin-footer a:hover {
+  color: var(--primary, #8884d8);
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-right ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .admin-footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-right ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* ===== Dark Mode ===== */
+body.dark-mode .admin-footer {
+  background-color: var(--bg2, #1f1f1f);
+  color: #ccc;
+  border-top: 1px solid #333;
+}
+
+body.dark-mode .admin-footer a {
+  color: #ccc;
+}
