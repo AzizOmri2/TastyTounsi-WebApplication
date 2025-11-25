@@ -7,6 +7,7 @@ const StoreContextProvider = (props) => {
 
     const [cartItems,setCartItems] = useState({});
     const url = process.env.REACT_APP_BACKEND_URL;
+    console.log("Backend URL:", url);
     const [token,setToken] = useState("");
     const [food_list,setFoodList] = useState([])
 
