@@ -16,4 +16,4 @@ export const assets ={
     parcel_icon
 }
 
-export const url = process.env.REACT_APP_BACKEND_URL;
+export const url = import.meta.env.VITE_BACKEND_URL;

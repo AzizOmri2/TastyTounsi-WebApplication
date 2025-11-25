@@ -22,7 +22,7 @@ import Settings from './pages/Settings/Settings'
 
 const App = () => {
 
-  const url = process.env.REACT_APP_BACKEND_URL;
+  const url = import.meta.env.VITE_BACKEND_URL;
   const location = useLocation();
 
   // Hide sidebar + navbar on login page
