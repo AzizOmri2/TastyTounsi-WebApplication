@@ -149,6 +149,15 @@
   text-align: center;
 }
 
+.hover-name {
+  transition: color 0.3s;
+}
+
+.hover-name:hover {
+  color: tomato; /* Change color on hover */
+  cursor: pointer;
+}
+
 /* ======================== Fade-in Animation ======================== */
 @keyframes fadeIn {
   from {

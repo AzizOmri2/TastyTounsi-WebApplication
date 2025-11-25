@@ -14,7 +14,8 @@ const Footer = () => {
     <footer className="admin-footer">
       <div className="footer-left">
         <p>
-          <AiOutlineCopyrightCircle /> {currentYear} {t.footer.brand} | {t.footer.adminPanel} — {t.footer.allRights}
+          <AiOutlineCopyrightCircle /> {currentYear} {t.footer.brand} | {t.footer.adminPanel} — {t.footer.allRights} | 
+          Developed By <a class="hover-name" href="https://www.linkedin.com/in/med-aziz-omri">Mohamed Aziz Omri</a>
         </p>
       </div>
       <div className="footer-right">
