@@ -71,7 +71,7 @@ const LoginAdmin = ({ url }) => {
             </form>
 
             <p className="admin-login-footer">
-                Developed By <a class="hover-name" href="https://www.linkedin.com/in/med-aziz-omri">Mohamed Aziz Omri</a> <br></br>© {new Date().getFullYear()} Tasty Tounsi | Admin Panel — All rights reserved
+                Developed By <a class="hover-name" href="https://mohamedazizomri.netlify.app" target="_blank" rel="noopener noreferrer">Mohamed Aziz Omri</a> <br></br>© {new Date().getFullYear()} Tasty Tounsi | Admin Panel — All rights reserved
             </p>
         </div>
     </div>

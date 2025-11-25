@@ -17,7 +17,9 @@ const Footer = () => {
                 </p>
                 <p>
                     <strong>CREDITS : </strong> 
-                    <span class="hover-name">Mohamed Aziz Omri</span>
+                    <span class="hover-name">
+                        <a href="https://mohamedazizomri.netlify.app" target="_blank" rel="noopener noreferrer">Mohamed Aziz Omri</a>
+                    </span>
                 </p>
                 <div className="footer-social-icons">
                     <img src={assets.facebook_icon} alt="" />
@@ -45,7 +47,7 @@ const Footer = () => {
             </div>
         </div>
         <p className="footer-copyright">
-            Developed By <a class="hover-name" href="https://www.linkedin.com/in/med-aziz-omri">Mohamed Aziz Omri</a> | Copyright 2025 © Tasty Tounsi - All Rights Reserved.
+            Developed By <a class="hover-name" href="https://mohamedazizomri.netlify.app" target="_blank" rel="noopener noreferrer">Mohamed Aziz Omri</a> | Copyright 2025 © Tasty Tounsi - All Rights Reserved.
         </p>
     </div>
   )

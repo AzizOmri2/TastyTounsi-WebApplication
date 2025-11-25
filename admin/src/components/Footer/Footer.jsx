@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="footer-left">
         <p>
           <AiOutlineCopyrightCircle /> {currentYear} {t.footer.brand} | {t.footer.adminPanel} — {t.footer.allRights} | 
-          Developed By <a class="hover-name" href="https://www.linkedin.com/in/med-aziz-omri">Mohamed Aziz Omri</a>
+          Developed By <a class="hover-name" href="https://mohamedazizomri.netlify.app" target="_blank" rel="noopener noreferrer">Mohamed Aziz Omri</a>
         </p>
       </div>
       <div className="footer-right">
