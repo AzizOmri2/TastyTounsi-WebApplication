@@ -13,6 +13,14 @@ import NotFound from './components/NotFound/NotFound'
 import { ToastContainer } from 'react-toastify'
 import PrivateRoute from './components/PrivateRoute'
 
+
+if (import.meta.env.MODE === "production") {
+  console.log = () => {};
+  console.warn = () => {};
+  console.error = () => {};
+}
+
+
 const App = () => {
 
   const [showLogin,setShowLogin] = useState(false);
